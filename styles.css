@@ -1,0 +1,83 @@
+* {
+	margin: 0px;
+}
+:root {
+	--primary-color: #db2777;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0rem auto;
+	width: 50vw;
+}
+.heading {
+	color: var(--primary-color);
+	font-size: xx-large;
+	margin: 2rem 0rem;
+}
+.description {
+	font-size: x-large;
+	font-weight: lighter;
+	width: 30rem;
+	margin: 1.5rem 0rem;
+}
+.img-description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#wallet {
+	width: 20rem;
+}
+label[for="bill-amount"] {
+	font-size: x-large;
+}
+#bill-amount {
+	font-size: larger;
+	padding: 0.5rem;
+	border-radius: 0.6rem;
+	border-color: var(--primary-color);
+}
+label[for="cash-given"] {
+	font-size: x-large;
+	margin: 0.5rem 0rem;
+}
+#cash-given {
+	font-size: larger;
+	padding: 0.5rem;
+	border-radius: 0.6rem;
+	border-color: var(--primary-color);
+}
+#check-button {
+	border-radius: 0.4rem;
+	margin: 1rem;
+	padding: 0.8rem;
+	font-size: larger;
+	background-color: var(--primary-color);
+	border: none;
+	color: white;
+}
+#error-message {
+	font-size: larger;
+	margin-bottom: 0.2rem;
+}
+.change-table {
+	border: 1px solid var(--primary-color);
+	margin: 25px 0;
+	font-size: 0.9em;
+	font-family: sans-serif;
+	min-width: 40rem;
+	min-height: 7rem;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.change-table th,
+.change-table td {
+	padding: 10px 12px;
+	border: 1px solid var(--primary-color);
+	border-bottom: 2px solid var(--primary-color);
+}
+.change-table caption {
+	font-size: x-large;
+	margin-bottom: 0.5rem;
+}
