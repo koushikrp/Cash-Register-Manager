@@ -12,7 +12,9 @@ function showErrorMessage(message) {
 
 checkButton.addEventListener("click", () => {
 	hideMessage();
-	if (isNaN(billAmount.value)) {
+	if (billAmount.value === "" || cashGiven.value === "") {
+		showErrorMessage("* Bill Amount and Cash Given cannot be Empty. Please fill them.");
+	} else if (isNaN(billAmount.value)) {
 		showErrorMessage("* Bill Amount should not be a String. Please Enter a Positive Integer.");
 	} else if (isNaN(cashGiven.value)) {
 		showErrorMessage("* Cash Given should not be a String. Please Enter a Positive Integer.");
@@ -20,6 +22,8 @@ checkButton.addEventListener("click", () => {
 		if (cashGiven.value >= billAmount.value) {
 			const amountToReturn = cashGiven.value - billAmount.value;
 			calculateChange(amountToReturn);
+		} else if (cashGiven.value <= 0) {
+			showErrorMessage("* Invalid Cash Given. Cash Given should be Positive");
 		} else {
 			showErrorMessage("* Cash provided should be atleast the Bill Amount");
 		}

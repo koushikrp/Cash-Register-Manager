@@ -57,6 +57,7 @@ label[for="cash-given"] {
 	background-color: var(--primary-color);
 	border: none;
 	color: white;
+	cursor: pointer;
 }
 #error-message {
 	font-size: larger;
