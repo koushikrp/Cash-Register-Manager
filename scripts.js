@@ -18,11 +18,11 @@ checkButton.addEventListener("click", () => {
 		showErrorMessage("* Bill Amount should not be a String. Please Enter a Positive Integer.");
 	} else if (isNaN(cashGiven.value)) {
 		showErrorMessage("* Cash Given should not be a String. Please Enter a Positive Integer.");
-	} else if (billAmount.value > 0) {
-		if (cashGiven.value >= billAmount.value) {
-			const amountToReturn = cashGiven.value - billAmount.value;
+	} else if (Number(billAmount.value) > 0) {
+		if (Number(cashGiven.value) >= Number(billAmount.value)) {
+			const amountToReturn = Number(cashGiven.value) - Number(billAmount.value);
 			calculateChange(amountToReturn);
-		} else if (cashGiven.value <= 0) {
+		} else if (Number(cashGiven.value) <= 0) {
 			showErrorMessage("* Invalid Cash Given. Cash Given should be Positive");
 		} else {
 			showErrorMessage("* Cash provided should be atleast the Bill Amount");
